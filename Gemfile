@@ -65,7 +65,7 @@ group :development, :test do
 end
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 5.3"
-gem 'dotenv-rails', '~> 2.7'
+gem 'dotenv-rails', '~> 3.1'
 gem "blacklight_range_limit", "9.0.0.beta2"
 gem 'blacklight-gallery', '~> 4.7.0'
 gem "openseadragon", "~> 1.0.12"
