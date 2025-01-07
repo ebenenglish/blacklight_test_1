@@ -9,5 +9,6 @@ import BlacklightRangeLimit from "blacklight-range-limit";
 
 BlacklightRangeLimit.init({onLoadHandler: Blacklight.onLoad});
 
-import OpenSeadragon from "openseadragon"
+// import OpenSeadragon from "openseadragon"
+import "openseadragon"
 import "openseadragon-rails"

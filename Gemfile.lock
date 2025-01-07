@@ -198,7 +198,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.1-x86_64-linux-gnu)
       racc (~> 1.4)
-    openseadragon (1.0.11)
+    openseadragon (1.0.12)
       rails (> 6.1.0)
     ostruct (0.6.1)
     parallel (1.26.3)
@@ -363,7 +363,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.7)
   importmap-rails
   jbuilder
-  openseadragon (~> 1.0.11)
+  openseadragon (~> 1.0.12)
   propshaft
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
