@@ -68,5 +68,5 @@ gem "bootstrap", "~> 5.3"
 gem 'dotenv-rails', '~> 2.7'
 gem "blacklight_range_limit", "9.0.0.beta2"
 gem 'blacklight-gallery', '~> 4.7.0'
-gem "openseadragon", "~> 1.0.12"
+gem "openseadragon", "~> 1.0.13"
 # gem "openseadragon", git: "https://github.com/sul-dlss/openseadragon-rails"
