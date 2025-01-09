@@ -59,12 +59,7 @@ have to add these to `application.bootstrap.scss`:
 ```
 gem "openseadragon", "~> 1.0.11"
 $ bundle install
-$ yarn add openseadragon-rails
-$ ./bin/importmap pin openseadragon-rails
-$ ./bin/importmap pin openseadragon
+$ yarn add openseadragon-rails # need this for images
+$ ./bin/importmap pin openseadragon # need this for JS
 # then followed all steps in lib/generators/openseadragon/install_generator.rb manually
 ```
-
-Getting error `dom-[fingerprint].js:39 Uncaught ReferenceError: OpenSeadragon is not defined` when trying to use `openseadragon_picture_tag` helper.
-Coming from `assets/openseadragon-rails/dom-[fingerprint].js`
-

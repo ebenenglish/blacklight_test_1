@@ -197,7 +197,11 @@
     <field name="all_text_timv" type="text" stored="false" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
 
 
-  </fields>
+    <!-- BEGIN Blacklight IIIF Search autocomplete config -->
+   <field name="iiif_suggest" type="textSuggest" indexed="true" stored="true" multiValued="true" />
+   <!-- END Blacklight IIIF Search autocomplete config -->
+
+</fields>
 
 
   <!-- Above, multiple source fields are copied to the [text] field.
@@ -355,9 +359,11 @@
       </analyzer>
     </fieldType>
 
-    <fieldType  name="textSuggest" class="solr.TextField" positionIncrementGap="100">
-       <analyzer>
-          <tokenizer class="solr.KeywordTokenizerFactory"/>
+    <fieldType name="textSuggest" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <!-- Blacklight IIIF Search autocomplete suggester config requires StandardTokenizerFactory -->
+        <!-- <tokenizer class="solr.KeywordTokenizerFactory"/> -->
+        <tokenizer class="solr.StandardTokenizerFactory"/>
           <filter class="solr.LowerCaseFilterFactory"/>
           <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
        </analyzer>
@@ -383,6 +389,28 @@
       </analyzer>
     </fieldType>
 
-  </types>
+  
+    <!-- BEGIN Blacklight IIIF Search autocomplete config -->
+    <!-- textSuggestTokenizer is only used by edu.stanford.dlss.search.suggest.analyzing.TokenizingLookupFactory -->
+    <!-- this fieldType can be ignored if using Solr > 7, see blacklight_iiif_search README for more info. -->
+    <fieldType name="textSuggestTokenizer" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt"/>
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <!-- uncomment below to enable multi-word matches -->
+        <!-- <filter class="solr.ShingleFilterFactory" outputUnigrams="true" outputUnigramsIfNoShingles="true" maxShingleSize="3" /> -->
+      </analyzer>
+    </fieldType>
+    <!-- END Blacklight IIIF Search autocomplete config -->
+
+</types>
+
+  <!-- BEGIN Blacklight IIIF Search autocomplete config -->
+  <copyField source="all_text_timv" dest="iiif_suggest"/>
+  <!-- END Blacklight IIIF Search autocomplete config -->
 
 </schema>
