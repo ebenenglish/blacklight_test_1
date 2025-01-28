@@ -63,3 +63,21 @@ $ yarn add openseadragon-rails # need this for images
 $ ./bin/importmap pin openseadragon # need this for JS
 # then followed all steps in lib/generators/openseadragon/install_generator.rb manually
 ```
+
+### Add font-awesome
+```
+yarn add @fortawesome/fontawesome-free # for CSS
+./bin/importmap pin @fortawesome/fontawesome-free # for JS
+# modify: 
+  - config/initializers/assets.rb
+  - app/assets/stylesheets/application.bootstrap.scss
+  - app/javascript/application.js
+
+# sources consulted:
+https://github.com/rails/cssbundling-rails/issues/22#issuecomment-2020972186
+https://discuss.rubyonrails.org/t/unable-to-import-font-awesome/82423/4
+https://discuss.rubyonrails.org/t/can-font-awesome-be-used-with-importmaps-in-rails-7/80238
+https://blog.corsego.com/fontawesome-importmaps-rails7
+https://docs.fontawesome.com/web/use-with/ruby-on-rails
+https://docs.fontawesome.com/v5/web/setup/use-package-managers
+```
