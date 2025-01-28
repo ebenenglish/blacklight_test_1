@@ -58,16 +58,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "blacklight", '~> 8.8.0'
-
-group :development, :test do
-  gem "solr_wrapper", ">= 0.3"
-end
-gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 5.3"
 gem 'dotenv-rails', '~> 2.7'
-gem "blacklight_range_limit", "9.0.0.beta2"
-gem 'blacklight-gallery', '~> 4.7.0'
-gem "openseadragon", "~> 1.0.12"
+
 # gem "commonwealth-vlr-engine", path: "/home/eenglish/boston-library/commonwealth-vlr-engine"
 gem "commonwealth-vlr-engine", path: "/Users/eben/Documents/Work/BPL/boston-library/commonwealth-vlr-engine"
