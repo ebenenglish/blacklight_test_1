@@ -13,3 +13,5 @@ import "openseadragon"
 import "openseadragon-rails"
 
 import "@fortawesome/fontawesome-free"
+
+import "commonwealth-vlr-engine"
