@@ -2,7 +2,7 @@ PATH
   remote: /Users/eben/Documents/Work/BPL/boston-library/commonwealth-vlr-engine
   specs:
     commonwealth-vlr-engine (0.1.0)
-      blacklight (~> 8.8.0)
+      blacklight (~> 8.8.2)
       blacklight-gallery (~> 4.8.4)
       blacklight_advanced_search (= 8.0.0.alpha2)
       blacklight_iiif_search (~> 3.0)
@@ -10,7 +10,7 @@ PATH
       font-awesome-sass (~> 6.5.2)
       iiif-presentation
       madison (~> 0.5.0)
-      openseadragon (~> 1.0.12)
+      openseadragon (~> 1.0.17)
       rails (~> 7.2.2, < 8)
       recaptcha (~> 5.17)
       rsolr (>= 1.0, < 3)
@@ -101,7 +101,7 @@ GEM
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bindex (0.8.1)
-    blacklight (8.8.0)
+    blacklight (8.8.2)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
@@ -237,7 +237,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.1-x86_64-linux-gnu)
       racc (~> 1.4)
-    openseadragon (1.0.12)
+    openseadragon (1.0.17)
       rails (> 6.1.0)
     ostruct (0.6.1)
     parallel (1.26.3)
